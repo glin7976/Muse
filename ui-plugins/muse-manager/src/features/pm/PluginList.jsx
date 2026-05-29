@@ -122,6 +122,7 @@ export default function PluginList({ app }) {
           <>
             <Button
               type="link"
+              size="small"
               style={{ padding: 0 }}
               onClick={() => {
                 NiceModal.show('muse-manager.plugin-info-modal', { plugin, app });
@@ -174,6 +175,7 @@ export default function PluginList({ app }) {
           >
             <Button
               type="link"
+              size="small"
               onClick={() => {
                 NiceModal.show('muse-manager.release-info-modal', {
                   plugin,
@@ -182,7 +184,7 @@ export default function PluginList({ app }) {
                   isLatest: true,
                 });
               }}
-              className='text-left px-0 text-wrap h-auto'
+              className="text-left px-0! text-wrap h-auto"
             >
               v{latest.version}
             </Button>
@@ -198,6 +200,7 @@ export default function PluginList({ app }) {
           >
             <Button
               type="link"
+              size="small"
               onClick={() => {
                 NiceModal.show('muse-manager.release-info-modal', {
                   plugin,
@@ -205,7 +208,7 @@ export default function PluginList({ app }) {
                   release: latest,
                 });
               }}
-              className='text-left px-0 text-wrap h-auto'
+              className="text-left px-0! text-wrap h-auto"
             >
               v{latest.version}
             </Button>
@@ -231,6 +234,7 @@ export default function PluginList({ app }) {
             return (
               <Button
                 type="link"
+                size="small"
                 style={{ textAlign: 'left', padding: 0, color }}
                 onClick={() => {
                   NiceModal.show('muse-manager.release-info-modal', {
@@ -292,7 +296,7 @@ export default function PluginList({ app }) {
           <PluginListBar app={app} />
           <Table
             rowKey="name"
-            size="small"
+            size="medium"
             columns={columns}
             dataSource={pluginList}
             loading={isLoading}
