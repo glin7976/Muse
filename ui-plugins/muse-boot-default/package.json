@@ -5,11 +5,12 @@
     "url": "https://github.com/ebay/Muse",
     "directory": "ui-plugins/muse-boot-default"
   },
-  "version": "1.3.5",
+  "version": "2.0.1",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
   "muse": {
+    "msp": "msp2606",
     "type": "boot"
   },
   "files": [
@@ -23,7 +24,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@ebay/muse-modules": "^1.0.29",
+    "@ebay/muse-modules": "^2.0.0",
     "@ebay/muse-vanilla-vite-plugin": "link:../../workspace/packages/muse-vanilla-vite-plugin",
     "@vitest/coverage-v8": "2.1.9",
     "cross-env": "^7.0.3",
