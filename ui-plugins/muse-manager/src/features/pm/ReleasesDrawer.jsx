@@ -83,6 +83,12 @@ const ReleasesDrawer = NiceModal.create(({ plugin, app }) => {
         return nodes;
       },
     },
+    {
+      dataIndex: 'msp',
+      order: 46,
+      title: 'MSP',
+      render: (msp) => msp || 'origin',
+    },
 
     {
       dataIndex: 'createdBy',
@@ -173,7 +179,7 @@ const ReleasesDrawer = NiceModal.create(({ plugin, app }) => {
         order: 10,
         node: (
           <div className="markdown-wrapper" key="markdown-desc">
-            <EditableReleaseNotes release={item} plugin={plugin}/>
+            <EditableReleaseNotes release={item} plugin={plugin} />
           </div>
         ),
       },
@@ -208,7 +214,7 @@ const ReleasesDrawer = NiceModal.create(({ plugin, app }) => {
     },
   ];
   return (
-    <Drawer {...antdDrawerV5(modal)} title={`Releases of ${plugin.name}`} width="1200px">
+    <Drawer {...antdDrawerV5(modal)} title={`Releases of ${plugin.name}`} size={1200}>
       <RequestStatus loading={isLoading} error={error} loadingMode="skeleton" />
       {!isLoading && (
         <Nodes
