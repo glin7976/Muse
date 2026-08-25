@@ -1,7 +1,7 @@
-export const PUBLIC_VARIABLES_ALERT_TITLE = 'Do not store credentials in Muse variables';
+export const PUBLIC_VARIABLES_ALERT_TITLE = 'Security warning';
 
 export const PUBLIC_VARIABLES_ALERT_DESCRIPTION =
-  'Do not store sensitive information in environment variables, including credentials, passwords, access tokens, API keys, or other secrets. These variables are exposed to the browser and must be treated as public information.';
+  'The variables are exposed to the browser and treated as public information. Do not store sensitive information in environment variables, including credentials, passwords, access tokens, API keys, or other secrets.';
 
 const SENSITIVE_KEY_PATTERN =
   /(^|[._-])(password|passwd|pass|pwd|secret|token|credentials?|oauth|api[._-]?key|access[._-]?key|auth[._-]?key|client[._-]?key|private[._-]?key|signing[._-]?key|db[._-]?pass)([._-]|$)/i;
