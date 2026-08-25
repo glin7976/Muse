@@ -1,7 +1,7 @@
 export const PUBLIC_VARIABLES_ALERT_TITLE = 'Do not store credentials in Muse variables';
 
 export const PUBLIC_VARIABLES_ALERT_DESCRIPTION =
-  'App and plugin variables are client-exposed configuration: they are shown in the Muse Manager variables UI and serialized into the app HTML response. Treat them as readable by users with Manager or app access, and do not store passwords, tokens, client secrets, or other credentials here.';
+  'Do not store sensitive information in environment variables, including credentials, passwords, access tokens, API keys, or other secrets. These variables are exposed to the browser and must be treated as public information.';
 
 const SENSITIVE_KEY_PATTERN =
   /(^|[._-])(password|passwd|pass|pwd|secret|token|credentials?|oauth|api[._-]?key|access[._-]?key|auth[._-]?key|client[._-]?key|private[._-]?key|signing[._-]?key|db[._-]?pass)([._-]|$)/i;
@@ -146,4 +146,3 @@ export const summarizeSensitiveFindings = (findings = []) => {
     reasons: [...reasons].map((reason) => SENSITIVE_FINDING_REASON_LABELS[reason] || reason),
   }));
 };
-
